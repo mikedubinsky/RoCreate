@@ -1,5 +1,9 @@
 ---
 ---
 
+// Override Minima theme variables
+$content-width: 1000px;
+$on-laptop: 1000px;
+
 @import "minima";
 @import "custom";

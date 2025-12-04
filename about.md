@@ -25,7 +25,7 @@ permalink: /about/
     </p>
   <h3>Get in Touch</h3>
 
-  <p><strong>Email:</strong> <a href="mailto:Rochelle@rocreate">Rochelle@rocreate</a></p>
+  <p><strong>Email:</strong> <a href="mailto:Rochelle@rocreate.com">Rochelle@rocreate.com</a></p>
 </div>
 
 ### Custom Orders
