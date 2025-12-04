@@ -1,0 +1,17 @@
+- title: Unique Designs
+  description: Each piece is one-of-a-kind, designed with creativity and passion. No two items are exactly alike, ensuring you own something truly special.
+  image: /assets/images/pendants1.jpg
+  link_url: /gallery/
+  link_text: View Our Gallery
+
+- title: Quality Craftsmanship
+  description: We use premium materials and time-honored techniques to create jewelry that's built to last and cherished for years to come.
+  image: /assets/images/bracelets1.jpg
+  link_url: /blog/
+  link_text: News & Events
+
+- title: Made to Order
+  description: Custom pieces tailored to your preferences. Come work with us to create the perfect piece that matches your vision and style.
+  image: /assets/images/display1.jpg
+  link_url: /about/
+  link_text: About Us

@@ -1,0 +1,42 @@
+title: RoCreate
+email: rochelle@rocreate.com
+description: >-
+  Handcrafted jewelry made with love and attention to detail.
+  Each piece is unique and crafted to perfection.
+baseurl: ""
+url: ""
+
+theme: minima
+
+# Blog settings
+permalink: /blog/:year/:month/:day/:title/
+paginate: 2
+paginate_path: "/blog/page:num/"
+
+# Navigation
+header_pages:
+  - index.md
+  - gallery.md
+  - blog/index.html
+  - about.md
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .idea/

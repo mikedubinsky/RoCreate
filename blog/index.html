@@ -1,0 +1,46 @@
+---
+layout: page
+title: News & Events
+---
+
+<p>Stay up to date with the latest from RoCreate! Here you'll find announcements about new collections, upcoming events, craft fairs, and behind-the-scenes glimpses into our creative process.</p>
+
+<div class="separator"><hr></div>
+
+<ul class="post-list">
+  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+  {%- for post in paginator.posts -%}
+  <li>
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h3>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </h3>
+    {%- if post.image -%}
+    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="post-thumbnail">
+    {%- endif -%}
+    {%- if post.excerpt -%}
+      {{ post.excerpt }}
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ul>
+
+{%- if paginator.total_pages > 1 -%}
+<div class="pagination">
+  {%- if paginator.previous_page -%}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">← Previous</a>
+  {%- else -%}
+    <span class="pagination-link disabled">← Previous</span>
+  {%- endif -%}
+
+  <span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+  {%- if paginator.next_page -%}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Next →</a>
+  {%- else -%}
+    <span class="pagination-link disabled">Next →</span>
+  {%- endif -%}
+</div>
+{%- endif -%}

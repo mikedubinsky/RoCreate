@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+
+    <div class="gallery-grid">
+      {%- for item in page.gallery_items -%}
+      <div class="gallery-item">
+        <img src="{{ site.baseurl }}/assets/images/{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+        <div class="gallery-overlay">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+</article>

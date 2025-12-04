@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<style>
+.hero {
+  width: 100vw;
+  height: 500px;
+  margin-left: calc(-50vw + 50%);
+  background-image: url('/assets/images/home-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(74, 144, 164, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  color: #4A90A4;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.hero a:hover {
+  background: #4A90A4;
+  color: white;
+}
+</style>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>{{ site.title }}</h1>
+    <p>Handcrafted Jewelry with Love</p>
+    <a href="{{ site.baseurl }}/gallery/">View Gallery</a>
+  </div>
+</div>
+
+<div class="home-content">
+  {{ content }}
+</div>
+
+{%- if site.data.highlights -%}
+<div class="highlights">
+  {%- for highlight in site.data.highlights -%}
+  <a href="{{ highlight.link_url | relative_url }}" class="highlight-card">
+    <h3>{{ highlight.title }}</h3>
+    {%- if highlight.image -%}
+    <img src="{{ highlight.image | relative_url }}" alt="{{ highlight.title }}" class="highlight-image">
+    {%- endif -%}
+    <p>{{ highlight.description }}</p>
+    <h4 class="highlight-link">{{ highlight.link_text }}</h4>
+  </a>
+  {%- endfor -%}
+</div>
+{%- endif -%}
